@@ -33,6 +33,20 @@ _Add certain files or folders to the repo as trackable files._
 git add <file_name>
 ```
 ---
+_Add all the files in the current (actively present directory in the terminal) directory to stage and not anything else that is part of the repo but not part of current directory._
+```Git
+git add .
+```
+---
+_To add all files in a repo to stage irrespective of current directory._
+```Git
+git add --all
+```
+**(OR)**
+```Git
+git add -A
+```
+---
 _Adds only new or modified files to stage. If something is deleted, it won't be staged._
 ```Git
 git add *
@@ -41,6 +55,11 @@ git add *
 _Unstage already staged files._
 ```Git
 git reset
+```
+---
+_Delete all staged and unstaged changes._
+```Git
+git reset --hard
 ```
 ---
 _This resets all the changes made after this particular commit, so it reverts all code back to this commit._
@@ -92,7 +111,7 @@ git checkout <branch_name>
 git switch <branch_name>
 ```
 ---
-_Creates a new branch and changes the head to that new one. (-c signifies create and -b signifies branch)_
+_Creates a new branch and changes the head to that new one. (-c signifies create and -b signifies branch)._
 ```Git
 git switch -c <branch_name>
 ```
@@ -109,6 +128,11 @@ git merge <branch_name>
 _Deletes a branch._
 ```Git
 git branch -d <branch_name>
+```
+---
+_Force deletes a branch._
+```Git
+git branch -D <branch_name>
 ```
 ---
 _Used to compare the commited version of a file with the staged version of the same file. It shows the differences and what changed from one version to another._
@@ -218,5 +242,10 @@ git rm --forced <file_name>
 _It keeps the file intact on the system but removes it from the repository, so it is no longer tracked._
 ```Git
 git rm --cached <file_name>
+```
+---
+_Delete untracked files._
+```Git
+git clean
 ```
 ---
